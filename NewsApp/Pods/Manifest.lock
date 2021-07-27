@@ -1,0 +1,98 @@
+PODS:
+  - Alamofire (4.8.0)
+  - LBTATools (1.0.12)
+  - Mockingjay (2.0.1):
+    - Mockingjay/Core (= 2.0.1)
+    - Mockingjay/XCTest (= 2.0.1)
+  - Mockingjay/Core (2.0.1):
+    - URITemplate (~> 2.0)
+  - Mockingjay/XCTest (2.0.1):
+    - Mockingjay/Core
+  - Nimble (8.0.9)
+  - "NSObject+Rx (5.1.0)":
+    - RxSwift (~> 5.1)
+  - Quick (2.1.0)
+  - R.swift (5.0.2):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - ReachabilitySwift (4.3.1)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
+  - SVProgressHUD (2.2.5)
+  - SwiftyJSON (4.3.0)
+  - URITemplate (2.0.3)
+
+DEPENDENCIES:
+  - Alamofire (= 4.8.0)
+  - LBTATools (from `https://github.com/johnrichard23/LBTATools`)
+  - Mockingjay (~> 2.0.1)
+  - Nimble (~> 8.0.2)
+  - "NSObject+Rx (~> 5)"
+  - Quick (~> 2.1.0)
+  - R.swift (= 5.0.2)
+  - ReachabilitySwift (= 4.3.1)
+  - RxSwift (~> 5)
+  - RxSwiftExt (~> 5)
+  - SVProgressHUD
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Mockingjay
+    - Nimble
+    - "NSObject+Rx"
+    - Quick
+    - R.swift
+    - R.swift.Library
+    - ReachabilitySwift
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
+    - SVProgressHUD
+    - SwiftyJSON
+    - URITemplate
+
+EXTERNAL SOURCES:
+  LBTATools:
+    :git: https://github.com/johnrichard23/LBTATools
+
+CHECKOUT OPTIONS:
+  LBTATools:
+    :commit: adfebcec7e09f07b184f1eca321dd5ec61c47d5b
+    :git: https://github.com/johnrichard23/LBTATools
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  LBTATools: 389a901a01b9a56bea5682c40cd6e23530f40015
+  Mockingjay: 11a621880d2887f1775bdcf824341eb68f218450
+  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
+  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  URITemplate: ace0c4c46dcf8afe6e89b4060621852886b15c3b
+
+PODFILE CHECKSUM: 8eb4b175409ed8fffc0a81586ab4a2176910543e
+
+COCOAPODS: 1.7.5
