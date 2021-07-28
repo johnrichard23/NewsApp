@@ -22,7 +22,7 @@ class App {
       with application: UIApplication,
       launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ){
-      api = APIClient(baseURL: URL(string: "https://newsapi.org/v2/top-headlines?")!)
+      api = APIClient(baseURL: URL(string: "https://newsapi.org/v2/")!)
   }
 
   func recordError(_ error: Error, info: [String: Any]? = nil) {

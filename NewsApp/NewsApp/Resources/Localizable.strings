@@ -13,4 +13,14 @@ cancel = "Cancel";
 // Home
 homeTitleName = "Today's News";
 homeUSTitleName = "US News Headlines";
-homeCanadaTitleName = "Canada's News Headlines";
+homeCanadaTitleName = "Canada News Headlines";
+
+// News
+usNewsTitle = "US";
+usNewsHeadlineTitle = "US Headlines";
+canadaNewsTitle = "CA";
+canadaNewsHeadlineTitle = "Canada Headlines";
+
+// Date
+
+datePublishedTitle = "Date Published:";

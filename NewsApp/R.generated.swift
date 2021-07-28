@@ -170,14 +170,24 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 3 images.
+  /// This `R.image` struct is generated, and contains static references to 8 images.
   struct image {
     /// Image `LaunchScreen`.
     static let launchScreen = Rswift.ImageResource(bundle: R.hostingBundle, name: "LaunchScreen")
     /// Image `US-news-icon`.
     static let usNewsIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "US-news-icon")
+    /// Image `backIcon`.
+    static let backIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "backIcon")
+    /// Image `canada-news-background`.
+    static let canadaNewsBackground = Rswift.ImageResource(bundle: R.hostingBundle, name: "canada-news-background")
     /// Image `canada-news-icon`.
     static let canadaNewsIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "canada-news-icon")
+    /// Image `default-news-image`.
+    static let defaultNewsImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "default-news-image")
+    /// Image `placeholder`.
+    static let placeholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "placeholder")
+    /// Image `usa-news-background`.
+    static let usaNewsBackground = Rswift.ImageResource(bundle: R.hostingBundle, name: "usa-news-background")
     
     /// `UIImage(named: "LaunchScreen", bundle: ..., traitCollection: ...)`
     static func launchScreen(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -189,20 +199,47 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.usNewsIcon, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "backIcon", bundle: ..., traitCollection: ...)`
+    static func backIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.backIcon, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "canada-news-background", bundle: ..., traitCollection: ...)`
+    static func canadaNewsBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.canadaNewsBackground, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "canada-news-icon", bundle: ..., traitCollection: ...)`
     static func canadaNewsIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.canadaNewsIcon, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "default-news-image", bundle: ..., traitCollection: ...)`
+    static func defaultNewsImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.defaultNewsImage, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "placeholder", bundle: ..., traitCollection: ...)`
+    static func placeholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.placeholder, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "usa-news-background", bundle: ..., traitCollection: ...)`
+    static func usaNewsBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.usaNewsBackground, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
+    /// Storyboard `News`.
+    static let news = _R.storyboard.news()
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -214,23 +251,48 @@ struct R: Rswift.Validatable {
       return UIKit.UIStoryboard(resource: R.storyboard.main)
     }
     
+    /// `UIStoryboard(name: "News", bundle: ...)`
+    static func news(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.news)
+    }
+    
     fileprivate init() {}
   }
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 9 localization keys.
     struct localizable {
-      /// Value: Canada's News Headlines
+      /// Value: CA
+      static let canadaNewsTitle = Rswift.StringResource(key: "canadaNewsTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Canada Headlines
+      static let canadaNewsHeadlineTitle = Rswift.StringResource(key: "canadaNewsHeadlineTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Canada News Headlines
       static let homeCanadaTitleName = Rswift.StringResource(key: "homeCanadaTitleName", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Cancel
       static let cancel = Rswift.StringResource(key: "cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Date Published:
+      static let datePublishedTitle = Rswift.StringResource(key: "datePublishedTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Today's News
       static let homeTitleName = Rswift.StringResource(key: "homeTitleName", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: US
+      static let usNewsTitle = Rswift.StringResource(key: "usNewsTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: US Headlines
+      static let usNewsHeadlineTitle = Rswift.StringResource(key: "usNewsHeadlineTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: US News Headlines
       static let homeUSTitleName = Rswift.StringResource(key: "homeUSTitleName", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       
-      /// Value: Canada's News Headlines
+      /// Value: CA
+      static func canadaNewsTitle(_: Void = ()) -> String {
+        return NSLocalizedString("canadaNewsTitle", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Canada Headlines
+      static func canadaNewsHeadlineTitle(_: Void = ()) -> String {
+        return NSLocalizedString("canadaNewsHeadlineTitle", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Canada News Headlines
       static func homeCanadaTitleName(_: Void = ()) -> String {
         return NSLocalizedString("homeCanadaTitleName", bundle: R.hostingBundle, comment: "")
       }
@@ -240,9 +302,24 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("cancel", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: Date Published:
+      static func datePublishedTitle(_: Void = ()) -> String {
+        return NSLocalizedString("datePublishedTitle", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: Today's News
       static func homeTitleName(_: Void = ()) -> String {
         return NSLocalizedString("homeTitleName", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: US
+      static func usNewsTitle(_: Void = ()) -> String {
+        return NSLocalizedString("usNewsTitle", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: US Headlines
+      static func usNewsHeadlineTitle(_: Void = ()) -> String {
+        return NSLocalizedString("usNewsHeadlineTitle", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: US News Headlines
@@ -278,6 +355,7 @@ struct _R: Rswift.Validatable {
     static func validate() throws {
       try launchScreen.validate()
       try main.validate()
+      try news.validate()
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -299,17 +377,23 @@ struct _R: Rswift.Validatable {
       typealias InitialController = UIKit.UINavigationController
       
       let bundle = R.hostingBundle
-      let homeController = StoryboardViewControllerResource<HomeController>(identifier: "HomeController")
       let name = "Main"
-      
-      func homeController(_: Void = ()) -> HomeController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: homeController)
-      }
       
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
-        if _R.storyboard.main().homeController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'homeController' could not be loaded from storyboard 'Main' as 'HomeController'.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct news: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "News"
+      
+      static func validate() throws {
+        if #available(iOS 11.0, *) {
+        }
       }
       
       fileprivate init() {}

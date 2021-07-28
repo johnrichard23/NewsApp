@@ -29,11 +29,14 @@ class HomeController: UIViewController {
     usNewsView.countryNameLabel.text = R.string.localizable.homeUSTitleName()
     canadaNewsView.countryNameLabel.text = R.string.localizable.homeCanadaTitleName()
     
+    usNewsView.imageView.image = R.image.usaNewsBackground()
+    canadaNewsView.imageView.image = R.image.canadaNewsBackground()
+    
     let usNewsViewtapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapUSNewsView))
     usNewsView.addGestureRecognizer(usNewsViewtapGesture)
     
     let canadaNewsViewtapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapCanadaNewsView))
-    usNewsView.addGestureRecognizer(canadaNewsViewtapGesture)
+    canadaNewsView.addGestureRecognizer(canadaNewsViewtapGesture)
     
     view.stack(usNewsView.withHeight(180),
                canadaNewsView.withHeight(180),
@@ -49,20 +52,18 @@ class HomeController: UIViewController {
   }
   
   @objc func didTapUSNewsView() {
-//    guard let vc = R.storyboard.charities.charityDetailsController() else { return }
-//    vc.charityId = featured?.id
-//    let navigationVC = NavigationController(rootViewController: vc)
-//    navigationVC.modalPresentationStyle = .fullScreen
-//    present(navigationVC, animated: true)
+    let vc = NewsController()
+    vc.newsId = R.string.localizable.usNewsTitle()
+    let navigationVC = NavigationController(rootViewController: vc)
+    navigationVC.modalPresentationStyle = .fullScreen
+    present(navigationVC, animated: true)
   }
   
   @objc func didTapCanadaNewsView() {
-  //    guard let vc = R.storyboard.charities.charityDetailsController() else { return }
-  //    vc.charityId = featured?.id
-  //    let navigationVC = NavigationController(rootViewController: vc)
-  //    navigationVC.modalPresentationStyle = .fullScreen
-  //    present(navigationVC, animated: true)
+    let vc = NewsController()
+    vc.newsId = R.string.localizable.canadaNewsTitle()
+    let navigationVC = NavigationController(rootViewController: vc)
+    navigationVC.modalPresentationStyle = .fullScreen
+    present(navigationVC, animated: true)
   }
-  
-
 }

@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 typealias APIClientResultClosure = (APIClientResult) -> Void
-//typealias APIClosure = ([Airport]?, Error?) -> Void
+typealias APINewsClosure = ([NewsArticles]?, Error?) -> Void
 
 enum APIClientResult {
     case success(APIResponse)
@@ -35,6 +35,8 @@ enum APIClientError: Error {
 class APIClient: AppService {
   
   public var dataRequest: DataRequest?
+  var news: News?
+  var articles = [NewsArticles]()
  
   private(set) var baseURL: URL
   
@@ -43,7 +45,8 @@ class APIClient: AppService {
   }
   
   public func endpointURL(_ resourcePath: String) -> URL {
-    return baseURL.appendingPathComponent("\(resourcePath)")
+    let urlComponents = URLComponents(string: resourcePath)!
+    return baseURL.appendingPathComponent("\(urlComponents.string!)")
   }
   
   public func endpointBaseURL(_ resourcePath: String) -> URL {

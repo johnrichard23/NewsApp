@@ -10,7 +10,7 @@ import UIKit
 
 class NewsView: BaseView {
   
-  lazy var imageView = UIImageView(image: R.image.launchScreen(),
+  lazy var imageView = UIImageView(image: R.image.placeholder(),
                               contentMode: .scaleAspectFill)
   
   let countryNameLabel = UILabel(text: "Country Name Here",
