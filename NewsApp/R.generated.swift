@@ -13,17 +13,185 @@ struct R: Rswift.Validatable {
   fileprivate static let hostingBundle = Bundle(for: R.Class.self)
   
   static func validate() throws {
+    try font.validate()
     try intern.validate()
   }
   
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.font` struct is generated, and contains static references to 18 fonts.
+  struct font: Rswift.Validatable {
+    /// Font `Montserrat-Bold`.
+    static let montserratBold = Rswift.FontResource(fontName: "Montserrat-Bold")
+    /// Font `Montserrat-Light`.
+    static let montserratLight = Rswift.FontResource(fontName: "Montserrat-Light")
+    /// Font `Montserrat-Medium`.
+    static let montserratMedium = Rswift.FontResource(fontName: "Montserrat-Medium")
+    /// Font `Montserrat-Regular`.
+    static let montserratRegular = Rswift.FontResource(fontName: "Montserrat-Regular")
+    /// Font `Montserrat-SemiBold`.
+    static let montserratSemiBold = Rswift.FontResource(fontName: "Montserrat-SemiBold")
+    /// Font `Montserrat-Thin`.
+    static let montserratThin = Rswift.FontResource(fontName: "Montserrat-Thin")
+    /// Font `SFProText-BoldItalic`.
+    static let sfProTextBoldItalic = Rswift.FontResource(fontName: "SFProText-BoldItalic")
+    /// Font `SFProText-Bold`.
+    static let sfProTextBold = Rswift.FontResource(fontName: "SFProText-Bold")
+    /// Font `SFProText-HeavyItalic`.
+    static let sfProTextHeavyItalic = Rswift.FontResource(fontName: "SFProText-HeavyItalic")
+    /// Font `SFProText-Heavy`.
+    static let sfProTextHeavy = Rswift.FontResource(fontName: "SFProText-Heavy")
+    /// Font `SFProText-Italic`.
+    static let sfProTextItalic = Rswift.FontResource(fontName: "SFProText-Italic")
+    /// Font `SFProText-LightItalic`.
+    static let sfProTextLightItalic = Rswift.FontResource(fontName: "SFProText-LightItalic")
+    /// Font `SFProText-Light`.
+    static let sfProTextLight = Rswift.FontResource(fontName: "SFProText-Light")
+    /// Font `SFProText-MediumItalic`.
+    static let sfProTextMediumItalic = Rswift.FontResource(fontName: "SFProText-MediumItalic")
+    /// Font `SFProText-Medium`.
+    static let sfProTextMedium = Rswift.FontResource(fontName: "SFProText-Medium")
+    /// Font `SFProText-Regular`.
+    static let sfProTextRegular = Rswift.FontResource(fontName: "SFProText-Regular")
+    /// Font `SFProText-SemiboldItalic`.
+    static let sfProTextSemiboldItalic = Rswift.FontResource(fontName: "SFProText-SemiboldItalic")
+    /// Font `SFProText-Semibold`.
+    static let sfProTextSemibold = Rswift.FontResource(fontName: "SFProText-Semibold")
+    
+    /// `UIFont(name: "Montserrat-Bold", size: ...)`
+    static func montserratBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: montserratBold, size: size)
+    }
+    
+    /// `UIFont(name: "Montserrat-Light", size: ...)`
+    static func montserratLight(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: montserratLight, size: size)
+    }
+    
+    /// `UIFont(name: "Montserrat-Medium", size: ...)`
+    static func montserratMedium(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: montserratMedium, size: size)
+    }
+    
+    /// `UIFont(name: "Montserrat-Regular", size: ...)`
+    static func montserratRegular(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: montserratRegular, size: size)
+    }
+    
+    /// `UIFont(name: "Montserrat-SemiBold", size: ...)`
+    static func montserratSemiBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: montserratSemiBold, size: size)
+    }
+    
+    /// `UIFont(name: "Montserrat-Thin", size: ...)`
+    static func montserratThin(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: montserratThin, size: size)
+    }
+    
+    /// `UIFont(name: "SFProText-Bold", size: ...)`
+    static func sfProTextBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfProTextBold, size: size)
+    }
+    
+    /// `UIFont(name: "SFProText-BoldItalic", size: ...)`
+    static func sfProTextBoldItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfProTextBoldItalic, size: size)
+    }
+    
+    /// `UIFont(name: "SFProText-Heavy", size: ...)`
+    static func sfProTextHeavy(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfProTextHeavy, size: size)
+    }
+    
+    /// `UIFont(name: "SFProText-HeavyItalic", size: ...)`
+    static func sfProTextHeavyItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfProTextHeavyItalic, size: size)
+    }
+    
+    /// `UIFont(name: "SFProText-Italic", size: ...)`
+    static func sfProTextItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfProTextItalic, size: size)
+    }
+    
+    /// `UIFont(name: "SFProText-Light", size: ...)`
+    static func sfProTextLight(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfProTextLight, size: size)
+    }
+    
+    /// `UIFont(name: "SFProText-LightItalic", size: ...)`
+    static func sfProTextLightItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfProTextLightItalic, size: size)
+    }
+    
+    /// `UIFont(name: "SFProText-Medium", size: ...)`
+    static func sfProTextMedium(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfProTextMedium, size: size)
+    }
+    
+    /// `UIFont(name: "SFProText-MediumItalic", size: ...)`
+    static func sfProTextMediumItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfProTextMediumItalic, size: size)
+    }
+    
+    /// `UIFont(name: "SFProText-Regular", size: ...)`
+    static func sfProTextRegular(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfProTextRegular, size: size)
+    }
+    
+    /// `UIFont(name: "SFProText-Semibold", size: ...)`
+    static func sfProTextSemibold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfProTextSemibold, size: size)
+    }
+    
+    /// `UIFont(name: "SFProText-SemiboldItalic", size: ...)`
+    static func sfProTextSemiboldItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfProTextSemiboldItalic, size: size)
+    }
+    
+    static func validate() throws {
+      if R.font.montserratBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Montserrat-Bold' could not be loaded, is 'Montserrat-Bold.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.montserratLight(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Montserrat-Light' could not be loaded, is 'Montserrat-Light.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.montserratMedium(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Montserrat-Medium' could not be loaded, is 'Montserrat-Medium.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.montserratRegular(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Montserrat-Regular' could not be loaded, is 'Montserrat-Regular.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.montserratSemiBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Montserrat-SemiBold' could not be loaded, is 'Montserrat-SemiBold.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.montserratThin(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Montserrat-Thin' could not be loaded, is 'Montserrat-Thin.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfProTextBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFProText-Bold' could not be loaded, is 'SF-Pro-Text-Bold.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfProTextBoldItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFProText-BoldItalic' could not be loaded, is 'SF-Pro-Text-BoldItalic.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfProTextHeavy(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFProText-Heavy' could not be loaded, is 'SF-Pro-Text-Heavy.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfProTextHeavyItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFProText-HeavyItalic' could not be loaded, is 'SF-Pro-Text-HeavyItalic.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfProTextItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFProText-Italic' could not be loaded, is 'SF-Pro-Text-RegularItalic.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfProTextLight(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFProText-Light' could not be loaded, is 'SF-Pro-Text-Light.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfProTextLightItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFProText-LightItalic' could not be loaded, is 'SF-Pro-Text-LightItalic.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfProTextMedium(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFProText-Medium' could not be loaded, is 'SF-Pro-Text-Medium.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfProTextMediumItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFProText-MediumItalic' could not be loaded, is 'SF-Pro-Text-MediumItalic.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfProTextRegular(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFProText-Regular' could not be loaded, is 'SF-Pro-Text-Regular.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfProTextSemibold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFProText-Semibold' could not be loaded, is 'SF-Pro-Text-Semibold.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfProTextSemiboldItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFProText-SemiboldItalic' could not be loaded, is 'SF-Pro-Text-SemiboldItalic.otf' added to the UIAppFonts array in this targets Info.plist?") }
+    }
+    
+    fileprivate init() {}
+  }
+  
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
     /// Image `LaunchScreen`.
     static let launchScreen = Rswift.ImageResource(bundle: R.hostingBundle, name: "LaunchScreen")
+    /// Image `US-news-icon`.
+    static let usNewsIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "US-news-icon")
+    /// Image `canada-news-icon`.
+    static let canadaNewsIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "canada-news-icon")
     
     /// `UIImage(named: "LaunchScreen", bundle: ..., traitCollection: ...)`
     static func launchScreen(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.launchScreen, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "US-news-icon", bundle: ..., traitCollection: ...)`
+    static func usNewsIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.usNewsIcon, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "canada-news-icon", bundle: ..., traitCollection: ...)`
+    static func canadaNewsIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.canadaNewsIcon, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -44,6 +212,45 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "Main", bundle: ...)`
     static func main(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.main)
+    }
+    
+    fileprivate init() {}
+  }
+  
+  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+  struct string {
+    /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
+    struct localizable {
+      /// Value: Canada's News Headlines
+      static let homeCanadaTitleName = Rswift.StringResource(key: "homeCanadaTitleName", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Cancel
+      static let cancel = Rswift.StringResource(key: "cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Today's News
+      static let homeTitleName = Rswift.StringResource(key: "homeTitleName", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: US News Headlines
+      static let homeUSTitleName = Rswift.StringResource(key: "homeUSTitleName", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Canada's News Headlines
+      static func homeCanadaTitleName(_: Void = ()) -> String {
+        return NSLocalizedString("homeCanadaTitleName", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Cancel
+      static func cancel(_: Void = ()) -> String {
+        return NSLocalizedString("cancel", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Today's News
+      static func homeTitleName(_: Void = ()) -> String {
+        return NSLocalizedString("homeTitleName", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: US News Headlines
+      static func homeUSTitleName(_: Void = ()) -> String {
+        return NSLocalizedString("homeUSTitleName", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
     }
     
     fileprivate init() {}
@@ -80,6 +287,7 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
       
       static func validate() throws {
+        if UIKit.UIImage(named: "LaunchScreen", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'LaunchScreen' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
       }
@@ -88,14 +296,20 @@ struct _R: Rswift.Validatable {
     }
     
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = ViewController
+      typealias InitialController = UIKit.UINavigationController
       
       let bundle = R.hostingBundle
+      let homeController = StoryboardViewControllerResource<HomeController>(identifier: "HomeController")
       let name = "Main"
+      
+      func homeController(_: Void = ()) -> HomeController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: homeController)
+      }
       
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
+        if _R.storyboard.main().homeController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'homeController' could not be loaded from storyboard 'Main' as 'HomeController'.") }
       }
       
       fileprivate init() {}
