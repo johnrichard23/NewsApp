@@ -50,10 +50,50 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // to restore the scene back to its current state.
   }
   
-  func updateRootViewController() {
+  func updateRootViewController(_ notification: Notification
+                                = Notification(name: SessionService.Notifications.didLogin)) {
+    
+      DispatchQueue.main.async {
+        if App.shared.sessionService.isLoggedIn {
+            self.switchToDashboard()
+        } else {
+          self.switchToFrontPage()
+//          self.tabBar.resetTabBar()
+        }
+      }
+  }
+  
+  func switchToFrontPage() {
+    window?.rootViewController = R.storyboard.auth.landingController()
+  }
+  
+  func switchToDashboard() {
     let homeController = HomeController()
     let navController = TransparentNavController(title: R.string.localizable.homeTitleName(), rootViewController: homeController, prefersLargeTitle: true)
     navController.modalPresentationStyle = .fullScreen
     window?.rootViewController = navController
+  }
+  
+  
+}
+
+private extension SceneDelegate {
+  
+  func setupNotificationObservers() {
+    let nc = NotificationCenter.default
+    let opQueue = OperationQueue.main
+    
+    nc.addObserver(
+      forName: SessionService.Notifications.didLogin,
+      object: nil,
+      queue: opQueue,
+      using: updateRootViewController)
+    
+//    nc.addObserver(
+//      forName: SessionService.Notifications.didLogout,
+//      object: nil,
+//      queue: opQueue,
+//      using: updateRootViewController)
+    
   }
 }

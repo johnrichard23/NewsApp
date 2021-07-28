@@ -12,7 +12,9 @@ public typealias JSONDictionary = [String: Any]
 
 struct Constants {
 
-
+  struct UserDefaults {
+    static let isNotFreshInstall = "isNotFreshInstall"
+  }
 }
 
 struct Formatters {

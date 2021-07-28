@@ -68,6 +68,20 @@
 		CA07CAE426B1343500B1F2B9 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CAE326B1343500B1F2B9 /* UINavigationItem.swift */; };
 		CA07CAE926B1381C00B1F2B9 /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CAE826B1381C00B1F2B9 /* NewsDetailView.swift */; };
 		CA07CAED26B1539600B1F2B9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CAEC26B1539600B1F2B9 /* Date.swift */; };
+		CA07CAF026B171D800B1F2B9 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CAEF26B171D800B1F2B9 /* SessionService.swift */; };
+		CA07CAF226B1729D00B1F2B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CAF126B1729D00B1F2B9 /* User.swift */; };
+		CA07CAF626B1753700B1F2B9 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA07CAF526B1753700B1F2B9 /* Auth.storyboard */; };
+		CA07CAFA26B176D000B1F2B9 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CAF926B176D000B1F2B9 /* LandingController.swift */; };
+		CA07CAFC26B177E000B1F2B9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CAFB26B177E000B1F2B9 /* LoginController.swift */; };
+		CA07CAFE26B177FA00B1F2B9 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CAFD26B177FA00B1F2B9 /* SignUpController.swift */; };
+		CA07CB0026B17EFC00B1F2B9 /* CustomScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CAFF26B17EFC00B1F2B9 /* CustomScrollViewController.swift */; };
+		CA07CB0326B1865200B1F2B9 /* DefaultTextInputControllerOutlined.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB0226B1865200B1F2B9 /* DefaultTextInputControllerOutlined.swift */; };
+		CA07CB0526B1874500B1F2B9 /* MDCTextInputControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB0426B1874500B1F2B9 /* MDCTextInputControllerBase.swift */; };
+		CA07CB0726B1878000B1F2B9 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB0626B1878000B1F2B9 /* String.swift */; };
+		CA07CB0C26B1898000B1F2B9 /* StringValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB0B26B1898000B1F2B9 /* StringValidations.swift */; };
+		CA07CB0F26B19D4700B1F2B9 /* LandingButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB0E26B19D4700B1F2B9 /* LandingButtonBarView.swift */; };
+		CA07CB1126B19D8100B1F2B9 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB1026B19D8100B1F2B9 /* UIView.swift */; };
+		CA07CB1426B1A12800B1F2B9 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB1326B1A12800B1F2B9 /* DefaultButton.swift */; };
 		D7F727D75E359F58B6528C64 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76C354F512E12F8D462F697 /* Pods_NewsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +175,20 @@
 		CA07CAE326B1343500B1F2B9 /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
 		CA07CAE826B1381C00B1F2B9 /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
 		CA07CAEC26B1539600B1F2B9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		CA07CAEF26B171D800B1F2B9 /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
+		CA07CAF126B1729D00B1F2B9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CA07CAF526B1753700B1F2B9 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		CA07CAF926B176D000B1F2B9 /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
+		CA07CAFB26B177E000B1F2B9 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		CA07CAFD26B177FA00B1F2B9 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		CA07CAFF26B17EFC00B1F2B9 /* CustomScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollViewController.swift; sourceTree = "<group>"; };
+		CA07CB0226B1865200B1F2B9 /* DefaultTextInputControllerOutlined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextInputControllerOutlined.swift; sourceTree = "<group>"; };
+		CA07CB0426B1874500B1F2B9 /* MDCTextInputControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCTextInputControllerBase.swift; sourceTree = "<group>"; };
+		CA07CB0626B1878000B1F2B9 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CA07CB0B26B1898000B1F2B9 /* StringValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidations.swift; sourceTree = "<group>"; };
+		CA07CB0E26B19D4700B1F2B9 /* LandingButtonBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingButtonBarView.swift; sourceTree = "<group>"; };
+		CA07CB1026B19D8100B1F2B9 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		CA07CB1326B1A12800B1F2B9 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,10 +303,9 @@
 		CA07CA6B26B0547B00B1F2B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CA07CAF826B1767000B1F2B9 /* Dashboard */,
+				CA07CAF726B1766A00B1F2B9 /* Auth */,
 				CA07CA9926B0608700B1F2B9 /* Main */,
-				CA07CA7126B0553F00B1F2B9 /* HomeController.swift */,
-				CA07CA7826B0569100B1F2B9 /* NewsController.swift */,
-				CA07CA7A26B056A100B1F2B9 /* NewsDetailController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -288,6 +315,7 @@
 			children = (
 				CA07CA9526B05B2200B1F2B9 /* Model.swift */,
 				CA07CA9E26B0638900B1F2B9 /* News.swift */,
+				CA07CAF126B1729D00B1F2B9 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -304,6 +332,9 @@
 		CA07CA6E26B0549000B1F2B9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CA07CB1226B1A11400B1F2B9 /* DefaultButton */,
+				CA07CB0D26B19D2A00B1F2B9 /* LandingButtonBarView */,
+				CA07CB0126B1863100B1F2B9 /* DefaultTextField */,
 				CA07CAE726B1380300B1F2B9 /* NewsDetail */,
 				CA07CAA526B066CA00B1F2B9 /* Home */,
 				CA07CAAA26B0749600B1F2B9 /* BaseView.swift */,
@@ -327,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				CA07CAD526B0E6A300B1F2B9 /* News.storyboard */,
+				CA07CAF526B1753700B1F2B9 /* Auth.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -342,6 +374,7 @@
 				CA07CA9326B05AEE00B1F2B9 /* AnyDecodable.swift */,
 				CA07CA9726B05B6300B1F2B9 /* Codable.swift */,
 				CA07CAA126B0656D00B1F2B9 /* DataRequest.swift */,
+				CA07CAFF26B17EFC00B1F2B9 /* CustomScrollViewController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -370,6 +403,7 @@
 		CA07CA8126B058D200B1F2B9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CA07CAEF26B171D800B1F2B9 /* SessionService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -390,6 +424,10 @@
 				CA07CADF26B0F32C00B1F2B9 /* SVProgressHUD.swift */,
 				CA07CAE326B1343500B1F2B9 /* UINavigationItem.swift */,
 				CA07CAEC26B1539600B1F2B9 /* Date.swift */,
+				CA07CB0426B1874500B1F2B9 /* MDCTextInputControllerBase.swift */,
+				CA07CB0626B1878000B1F2B9 /* String.swift */,
+				CA07CB0B26B1898000B1F2B9 /* StringValidations.swift */,
+				CA07CB1026B19D8100B1F2B9 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -474,6 +512,50 @@
 				CA07CAE826B1381C00B1F2B9 /* NewsDetailView.swift */,
 			);
 			path = NewsDetail;
+			sourceTree = "<group>";
+		};
+		CA07CAF726B1766A00B1F2B9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CA07CAF926B176D000B1F2B9 /* LandingController.swift */,
+				CA07CAFB26B177E000B1F2B9 /* LoginController.swift */,
+				CA07CAFD26B177FA00B1F2B9 /* SignUpController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		CA07CAF826B1767000B1F2B9 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				CA07CA7126B0553F00B1F2B9 /* HomeController.swift */,
+				CA07CA7826B0569100B1F2B9 /* NewsController.swift */,
+				CA07CA7A26B056A100B1F2B9 /* NewsDetailController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		CA07CB0126B1863100B1F2B9 /* DefaultTextField */ = {
+			isa = PBXGroup;
+			children = (
+				CA07CB0226B1865200B1F2B9 /* DefaultTextInputControllerOutlined.swift */,
+			);
+			path = DefaultTextField;
+			sourceTree = "<group>";
+		};
+		CA07CB0D26B19D2A00B1F2B9 /* LandingButtonBarView */ = {
+			isa = PBXGroup;
+			children = (
+				CA07CB0E26B19D4700B1F2B9 /* LandingButtonBarView.swift */,
+			);
+			path = LandingButtonBarView;
+			sourceTree = "<group>";
+		};
+		CA07CB1226B1A11400B1F2B9 /* DefaultButton */ = {
+			isa = PBXGroup;
+			children = (
+				CA07CB1326B1A12800B1F2B9 /* DefaultButton.swift */,
+			);
+			path = DefaultButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -585,6 +667,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA07CAF626B1753700B1F2B9 /* Auth.storyboard in Resources */,
 				CA07CAD626B0E6A300B1F2B9 /* News.storyboard in Resources */,
 				CA07CACA26B0757F00B1F2B9 /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				CA07CAC326B0757F00B1F2B9 /* Montserrat-Bold.otf in Resources */,
@@ -739,31 +822,44 @@
 				CA07CA8026B058CD00B1F2B9 /* App.swift in Sources */,
 				CA07CA7926B0569100B1F2B9 /* NewsController.swift in Sources */,
 				CA07CADE26B0F17100B1F2B9 /* Constants.swift in Sources */,
+				CA07CB0F26B19D4700B1F2B9 /* LandingButtonBarView.swift in Sources */,
 				CA07CAE026B0F32C00B1F2B9 /* SVProgressHUD.swift in Sources */,
 				CA07CA7226B0553F00B1F2B9 /* HomeController.swift in Sources */,
 				CA07CAE226B11BBB00B1F2B9 /* Router.swift in Sources */,
 				CA07CAA426B0667B00B1F2B9 /* HomeViewModel.swift in Sources */,
 				CA07CAE926B1381C00B1F2B9 /* NewsDetailView.swift in Sources */,
+				CA07CB0526B1874500B1F2B9 /* MDCTextInputControllerBase.swift in Sources */,
 				CA07CA8826B0592100B1F2B9 /* BaseResponse.swift in Sources */,
 				CA07CAAD26B074DA00B1F2B9 /* NewsView.swift in Sources */,
 				CA07CA8426B0590500B1F2B9 /* APIClient.swift in Sources */,
 				CA07CA4026B04DB700B1F2B9 /* ViewController.swift in Sources */,
 				CA07CADA26B0EF3E00B1F2B9 /* NewsViewModel.swift in Sources */,
+				CA07CAFC26B177E000B1F2B9 /* LoginController.swift in Sources */,
 				CA07CAED26B1539600B1F2B9 /* Date.swift in Sources */,
 				CA07CA8626B0591200B1F2B9 /* APIResponse.swift in Sources */,
 				CA07CA7D26B056CC00B1F2B9 /* R.generated.swift in Sources */,
 				CA07CADC26B0F00E00B1F2B9 /* APIClient+News.swift in Sources */,
 				CA07CAE426B1343500B1F2B9 /* UINavigationItem.swift in Sources */,
+				CA07CAFA26B176D000B1F2B9 /* LandingController.swift in Sources */,
+				CA07CB0026B17EFC00B1F2B9 /* CustomScrollViewController.swift in Sources */,
 				CA07CA9626B05B2200B1F2B9 /* Model.swift in Sources */,
+				CA07CB1126B19D8100B1F2B9 /* UIView.swift in Sources */,
 				CA07CAAB26B0749600B1F2B9 /* BaseView.swift in Sources */,
+				CA07CAF226B1729D00B1F2B9 /* User.swift in Sources */,
 				CA07CA3C26B04DB700B1F2B9 /* AppDelegate.swift in Sources */,
+				CA07CB1426B1A12800B1F2B9 /* DefaultButton.swift in Sources */,
+				CA07CAF026B171D800B1F2B9 /* SessionService.swift in Sources */,
+				CA07CB0326B1865200B1F2B9 /* DefaultTextInputControllerOutlined.swift in Sources */,
 				CA07CA9026B05A7A00B1F2B9 /* Defaultable.swift in Sources */,
+				CA07CB0C26B1898000B1F2B9 /* StringValidations.swift in Sources */,
 				CA07CA7B26B056A100B1F2B9 /* NewsDetailController.swift in Sources */,
 				CA07CAA926B0676D00B1F2B9 /* CollectionSection.swift in Sources */,
+				CA07CB0726B1878000B1F2B9 /* String.swift in Sources */,
 				CA07CA8A26B0597000B1F2B9 /* Helpers.swift in Sources */,
 				CA07CA9426B05AEE00B1F2B9 /* AnyDecodable.swift in Sources */,
 				CA07CA7626B055D900B1F2B9 /* TableViewController.swift in Sources */,
 				CA07CA9B26B0609D00B1F2B9 /* TransparentNavController.swift in Sources */,
+				CA07CAFE26B177FA00B1F2B9 /* SignUpController.swift in Sources */,
 				CA07CA9826B05B6300B1F2B9 /* Codable.swift in Sources */,
 				CA07CA9F26B0638900B1F2B9 /* News.swift in Sources */,
 				CA07CA8D26B05A2200B1F2B9 /* Error.swift in Sources */,

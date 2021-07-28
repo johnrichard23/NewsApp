@@ -12,7 +12,16 @@ class App {
   
   static let shared = App()
   
+  var isNotFreshInstall: Bool {
+    let defaults = UserDefaults.standard
+    return defaults.bool(forKey: Constants.UserDefaults.isNotFreshInstall)
+  }
+  
   private(set) var api: APIClient!
+  
+  private(set) lazy var sessionService: SessionService = {
+    return SessionService(api: api)
+  }()
   
   init() {
     

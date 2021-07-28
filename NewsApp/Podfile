@@ -9,9 +9,13 @@ use_frameworks!
       pod 'ReachabilitySwift', '4.3.1'
       pod 'SVProgressHUD'
       pod 'R.swift', '5.0.2'
+      pod 'PureLayout', '~> 3.0.2'
 
       # UI
       pod 'LBTATools', :git => 'https://github.com/johnrichard23/LBTATools'
+      pod 'XLPagerTabStrip', '8.1'
+      pod 'MaterialComponents/TextFields'
+      pod 'Popover', '1.2.1'
 
       # Rx
       pod 'RxSwift', '~> 5'

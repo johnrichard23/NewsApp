@@ -232,14 +232,21 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
   struct storyboard {
+    /// Storyboard `Auth`.
+    static let auth = _R.storyboard.auth()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
     /// Storyboard `News`.
     static let news = _R.storyboard.news()
+    
+    /// `UIStoryboard(name: "Auth", bundle: ...)`
+    static func auth(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.auth)
+    }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -353,9 +360,45 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
+      try auth.validate()
       try launchScreen.validate()
       try main.validate()
       try news.validate()
+    }
+    
+    struct auth: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let landingController = StoryboardViewControllerResource<LandingController>(identifier: "LandingController")
+      let loginController = StoryboardViewControllerResource<LoginController>(identifier: "LoginController")
+      let name = "Auth"
+      let signUpController = StoryboardViewControllerResource<SignUpController>(identifier: "SignUpController")
+      
+      func landingController(_: Void = ()) -> LandingController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: landingController)
+      }
+      
+      func loginController(_: Void = ()) -> LoginController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: loginController)
+      }
+      
+      func signUpController(_: Void = ()) -> SignUpController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: signUpController)
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "fb-icon", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'fb-icon' is used in storyboard 'Auth', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "placeholder", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'placeholder' is used in storyboard 'Auth', but couldn't be loaded.") }
+        if #available(iOS 11.0, *) {
+          if UIKit.UIColor(named: "Bunting", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'Bunting' is used in storyboard 'Auth', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "DeepSkyBlue", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'DeepSkyBlue' is used in storyboard 'Auth', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "Indigo", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'Indigo' is used in storyboard 'Auth', but couldn't be loaded.") }
+        }
+        if _R.storyboard.auth().landingController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'landingController' could not be loaded from storyboard 'Auth' as 'LandingController'.") }
+        if _R.storyboard.auth().loginController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'loginController' could not be loaded from storyboard 'Auth' as 'LoginController'.") }
+        if _R.storyboard.auth().signUpController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'signUpController' could not be loaded from storyboard 'Auth' as 'SignUpController'.") }
+      }
+      
+      fileprivate init() {}
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
