@@ -41,6 +41,10 @@ class SessionService {
 // MARK: Public
 extension SessionService {
   
+  func isLogIn() -> Bool {
+    return UserDefaults.standard.bool(forKey: "isLoggedIn")
+  }
+  
   func didLogin() {
     NotificationCenter.default.post(name: Notifications.didLogin, object: nil)
   }
@@ -53,7 +57,6 @@ extension SessionService {
     api.postRegisterUser(email: email, password: password) { [weak self] (success) in
       guard let self = self else { return }
       if (success) {
-        self.isLoggedIn = true
         self.didLogin()
       } else {
         SVProgressHUD.showDismissableError(with: "Registration failed")
@@ -71,6 +74,7 @@ extension SessionService {
         if (success) {
           self.isLoggedIn = true
           self.didLogin()
+          UserDefaults.standard.setIsLoggedIn(value: true)
         } else {
           SVProgressHUD.showDismissableError(with: "Login failed")
         }
@@ -78,7 +82,7 @@ extension SessionService {
   }
   
   func logout() {
-    self.isLoggedIn = false
+    UserDefaults.standard.setIsLoggedIn(value: false)
     NotificationCenter.default.post(name: Notifications.didLogout, object: nil)
   }
 }

@@ -22,7 +22,6 @@ class LoginController: CustomScrollViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setup()
     }
 }

@@ -54,7 +54,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   func updateRootViewController(_ notification: Notification
                                 = Notification(name: SessionService.Notifications.didLogin)) {
       DispatchQueue.main.async {
-        if App.shared.sessionService.isLoggedIn {
+        if App.shared.sessionService.isLogIn() {
             self.switchToDashboard()
         } else {
           self.switchToFrontPage()

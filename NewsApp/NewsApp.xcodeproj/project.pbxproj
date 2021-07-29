@@ -85,6 +85,10 @@
 		CA07CB1626B2321400B1F2B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA07CB1526B2321300B1F2B9 /* GoogleService-Info.plist */; };
 		CA07CB1826B2450D00B1F2B9 /* APIClient+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB1726B2450D00B1F2B9 /* APIClient+Auth.swift */; };
 		CA07CB1A26B29AFB00B1F2B9 /* LogoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB1926B29AFB00B1F2B9 /* LogoutController.swift */; };
+		CA07CB1C26B2AFFD00B1F2B9 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB1B26B2AFFC00B1F2B9 /* UserDefaultsExtension.swift */; };
+		CA07CB1E26B2BAFA00B1F2B9 /* LoginFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB1D26B2BAFA00B1F2B9 /* LoginFormTests.swift */; };
+		CA07CB2126B2BB5300B1F2B9 /* BaseLoginFormTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB2026B2BB5300B1F2B9 /* BaseLoginFormTestCase.swift */; };
+		CA07CB2326B2BB8400B1F2B9 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB2226B2BB8400B1F2B9 /* BaseTestCase.swift */; };
 		D7F727D75E359F58B6528C64 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76C354F512E12F8D462F697 /* Pods_NewsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -195,6 +199,10 @@
 		CA07CB1526B2321300B1F2B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA07CB1726B2450D00B1F2B9 /* APIClient+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Auth.swift"; sourceTree = "<group>"; };
 		CA07CB1926B29AFB00B1F2B9 /* LogoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutController.swift; sourceTree = "<group>"; };
+		CA07CB1B26B2AFFC00B1F2B9 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		CA07CB1D26B2BAFA00B1F2B9 /* LoginFormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormTests.swift; sourceTree = "<group>"; };
+		CA07CB2026B2BB5300B1F2B9 /* BaseLoginFormTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoginFormTestCase.swift; sourceTree = "<group>"; };
+		CA07CB2226B2BB8400B1F2B9 /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +309,8 @@
 		CA07CA5C26B04DBB00B1F2B9 /* NewsAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				CA07CB1D26B2BAFA00B1F2B9 /* LoginFormTests.swift */,
+				CA07CB1F26B2BB3500B1F2B9 /* Helpers */,
 				CA07CA5D26B04DBB00B1F2B9 /* NewsAppUITests.swift */,
 				CA07CA5F26B04DBB00B1F2B9 /* Info.plist */,
 			);
@@ -436,6 +446,7 @@
 				CA07CB0626B1878000B1F2B9 /* String.swift */,
 				CA07CB0B26B1898000B1F2B9 /* StringValidations.swift */,
 				CA07CB1026B19D8100B1F2B9 /* UIView.swift */,
+				CA07CB1B26B2AFFC00B1F2B9 /* UserDefaultsExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -565,6 +576,15 @@
 				CA07CB1326B1A12800B1F2B9 /* DefaultButton.swift */,
 			);
 			path = DefaultButton;
+			sourceTree = "<group>";
+		};
+		CA07CB1F26B2BB3500B1F2B9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CA07CB2026B2BB5300B1F2B9 /* BaseLoginFormTestCase.swift */,
+				CA07CB2226B2BB8400B1F2B9 /* BaseTestCase.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -872,6 +892,7 @@
 				CA07CA7626B055D900B1F2B9 /* TableViewController.swift in Sources */,
 				CA07CA9B26B0609D00B1F2B9 /* TransparentNavController.swift in Sources */,
 				CA07CAFE26B177FA00B1F2B9 /* SignUpController.swift in Sources */,
+				CA07CB1C26B2AFFD00B1F2B9 /* UserDefaultsExtension.swift in Sources */,
 				CA07CA9826B05B6300B1F2B9 /* Codable.swift in Sources */,
 				CA07CA9F26B0638900B1F2B9 /* News.swift in Sources */,
 				CA07CA8D26B05A2200B1F2B9 /* Error.swift in Sources */,
@@ -891,7 +912,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA07CB2326B2BB8400B1F2B9 /* BaseTestCase.swift in Sources */,
 				CA07CA5E26B04DBB00B1F2B9 /* NewsAppUITests.swift in Sources */,
+				CA07CB1E26B2BAFA00B1F2B9 /* LoginFormTests.swift in Sources */,
+				CA07CB2126B2BB5300B1F2B9 /* BaseLoginFormTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
