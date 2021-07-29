@@ -54,12 +54,12 @@ extension SignUpController {
     }
     
     SVProgressHUD.show()
-//    App.shared.sessionService.register(email: email, password: password) { error in
-//      if let error = error {
-//        return SVProgressHUD.showDismissableError(with: error.localizedDescription)
-//      }
-//      SVProgressHUD.dismiss()
-//    }
+    App.shared.sessionService.register(email: email, password: password) { error in
+      if let error = error {
+        return SVProgressHUD.showDismissableError(with: error.localizedDescription)
+      }
+      SVProgressHUD.dismiss()
+    }
   }
 }
 

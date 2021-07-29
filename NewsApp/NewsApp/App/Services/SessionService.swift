@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import FirebaseAuth
+import SVProgressHUD
 
 class SessionService {
   
@@ -16,6 +18,7 @@ class SessionService {
   }
   
   private(set) var api: APIClient
+  private(set) var isLoggedIn: Bool
   
   var user: User? {
     didSet {
@@ -28,13 +31,9 @@ class SessionService {
     return user?.id ?? 0
   }
   
-  var isLoggedIn: Bool {
-    return user != nil
-  }
-  
   init(api: APIClient) {
     self.api = api
-    self.user = try! UserDefaults.standard.cachedUser?.decoded()
+    self.isLoggedIn = false
   }
   
 }
@@ -45,48 +44,41 @@ extension SessionService {
   func didLogin() {
     NotificationCenter.default.post(name: Notifications.didLogin, object: nil)
   }
+    
+  func register(
+    email: String,
+    password: String,
+    _ completion: @escaping (_ error: Error?) -> Void) {
+    
+    api.postRegisterUser(email: email, password: password) { [weak self] (success) in
+      guard let self = self else { return }
+      if (success) {
+        self.isLoggedIn = true
+        self.didLogin()
+      } else {
+        SVProgressHUD.showDismissableError(with: "Registration failed")
+      }
+    }
+  }
   
-//  func loginAsGuest() {
-//    UserDefaults.standard.loggedInAsGuest = true
-//    didLogin()
-//  }
-//  
-//  func register(
-//    email: String,
-//    password: String,
-//    _ completion: @escaping (_ error: Error?) -> Void) {
-//    api.postRegisterUser(email: email, password: password, loginHandler(completion))
-//  }
-//  
-//  func login(
-//    email: String,
-//    password: String,
-//    _ completion: @escaping (_ error: Error?) -> Void) {
-//    api.postLoginUser(email: email, password: password, loginHandler(completion))
-//  }
-//  
-//  private func loginHandler(_ completion: @escaping (_ error: Error?) -> Void) -> APIClientLoginClosure {
-//    return { user, token, error in
-//      guard let user = user, let token = token, error == nil else {
-//        return completion(error)
-//      }
-//      debugPrint("test", user)
-//      self.user = user
-//      self.api.accessToken = token
-//      completion(nil)
-//      
-//      self.didUpdateProfile(user)
-//      NotificationCenter.default.post(name: SessionService.Notifications.didUpdateProfile,
-//                                      object: nil)
-//      
-//      self.didLogin()
-//    }
-//  }
+  func login(
+    email: String,
+    password: String,
+    _ completion: @escaping (_ error: Error?) -> Void) {
+    
+    api.postLoginUser(email: email, password: password) { [weak self] (success) in
+        guard let self = self else { return }
+        if (success) {
+          self.isLoggedIn = true
+          self.didLogin()
+        } else {
+          SVProgressHUD.showDismissableError(with: "Login failed")
+        }
+    }
+  }
   
   func logout() {
-    user = nil
-//    api.accessToken = nil
-    UserDefaults.standard.loggedInAsGuest = false
+    self.isLoggedIn = false
     NotificationCenter.default.post(name: Notifications.didLogout, object: nil)
   }
 }
@@ -109,19 +101,6 @@ private extension UserDefaults {
 }
 
 private extension UserDefaults {
-  
-  private var loggedInAsGuestKey: String {
-    return "SessionService:loggedInAsGuest"
-  }
-  
-  var loggedInAsGuest: Bool {
-    set {
-      set(newValue, forKey: loggedInAsGuestKey)
-    }
-    get {
-      return bool(forKey: loggedInAsGuestKey)
-    }
-  }
   
 }
 

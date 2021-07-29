@@ -22,5 +22,9 @@ canadaNewsTitle = "CA";
 canadaNewsHeadlineTitle = "Canada Headlines";
 
 // Date
-
 datePublishedTitle = "Date Published:";
+
+//Logout
+logout.title = "Log Out";
+logout-confirmation.title = "Log Out?";
+logout-confirmation.subtitle = "Are you sure you want to log out?";

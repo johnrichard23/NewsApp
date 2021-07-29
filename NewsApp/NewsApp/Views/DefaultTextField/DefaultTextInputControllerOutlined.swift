@@ -16,9 +16,9 @@ class DefaultTextInputControllerOutlined: MDCTextInputControllerOutlined {
   
   required init(textInput input: (UIView & MDCTextInput)?) {
     super.init(textInput: input)
-    activeColor = UIColor.blue
+    activeColor = UIColor.lightGray
     normalColor = UIColor.lightGray
-    floatingPlaceholderActiveColor = UIColor.blue
-    floatingPlaceholderNormalColor = UIColor.systemBlue
+    floatingPlaceholderActiveColor = UIColor.gray
+    floatingPlaceholderNormalColor = UIColor.lightGray
   }
 }

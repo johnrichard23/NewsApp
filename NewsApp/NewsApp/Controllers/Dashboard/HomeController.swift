@@ -8,6 +8,7 @@
 
 import UIKit
 import LBTATools
+import PopItUp
 import SVProgressHUD
 
 class HomeController: UIViewController {
@@ -49,6 +50,19 @@ class HomeController: UIViewController {
     view.backgroundColor = .white
     navigationItem.title = R.string.localizable.homeTitleName()
     navigationController?.navigationBar.prefersLargeTitles = true
+    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+  }
+  
+  @objc func handleLogout() {
+      let vc = LogoutController()
+      vc.delegate = self
+      presentPopup(vc,
+                   animated: true,
+                   backgroundStyle: .blur(.dark),
+                   constraints: [.leading(0), .trailing(0), .bottom(0), .height(225)],
+                   transitioning: .slide(.bottom),
+                   autoDismiss: true,
+                   completion: nil)
   }
   
   @objc func didTapUSNewsView() {
@@ -65,5 +79,11 @@ class HomeController: UIViewController {
     let navigationVC = NavigationController(rootViewController: vc)
     navigationVC.modalPresentationStyle = .fullScreen
     present(navigationVC, animated: true)
+  }
+}
+
+extension HomeController: LogoutViewProtocol {
+  func logout() {
+    App.shared.sessionService.logout()
   }
 }

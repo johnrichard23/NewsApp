@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 
 typealias APIClientResultClosure = (APIClientResult) -> Void
+typealias APIClientLoginClosure = (User?, Error?) -> Void
 typealias APINewsClosure = ([NewsArticles]?, Error?) -> Void
 
 enum APIClientResult {

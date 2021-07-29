@@ -17,6 +17,20 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
+  /// This `R.file` struct is generated, and contains static references to 1 files.
+  struct file {
+    /// Resource file `GoogleService-Info.plist`.
+    static let googleServiceInfoPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "GoogleService-Info", pathExtension: "plist")
+    
+    /// `bundle.url(forResource: "GoogleService-Info", withExtension: "plist")`
+    static func googleServiceInfoPlist(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.googleServiceInfoPlist
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    fileprivate init() {}
+  }
+  
   /// This `R.font` struct is generated, and contains static references to 18 fonts.
   struct font: Rswift.Validatable {
     /// Font `Montserrat-Bold`.
@@ -268,8 +282,10 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 9 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 12 localization keys.
     struct localizable {
+      /// Value: Are you sure you want to log out?
+      static let logoutConfirmationSubtitle = Rswift.StringResource(key: "logout-confirmation.subtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: CA
       static let canadaNewsTitle = Rswift.StringResource(key: "canadaNewsTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Canada Headlines
@@ -280,6 +296,10 @@ struct R: Rswift.Validatable {
       static let cancel = Rswift.StringResource(key: "cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Date Published:
       static let datePublishedTitle = Rswift.StringResource(key: "datePublishedTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Log Out
+      static let logoutTitle = Rswift.StringResource(key: "logout.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Log Out?
+      static let logoutConfirmationTitle = Rswift.StringResource(key: "logout-confirmation.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Today's News
       static let homeTitleName = Rswift.StringResource(key: "homeTitleName", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: US
@@ -288,6 +308,11 @@ struct R: Rswift.Validatable {
       static let usNewsHeadlineTitle = Rswift.StringResource(key: "usNewsHeadlineTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: US News Headlines
       static let homeUSTitleName = Rswift.StringResource(key: "homeUSTitleName", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Are you sure you want to log out?
+      static func logoutConfirmationSubtitle(_: Void = ()) -> String {
+        return NSLocalizedString("logout-confirmation.subtitle", bundle: R.hostingBundle, comment: "")
+      }
       
       /// Value: CA
       static func canadaNewsTitle(_: Void = ()) -> String {
@@ -312,6 +337,16 @@ struct R: Rswift.Validatable {
       /// Value: Date Published:
       static func datePublishedTitle(_: Void = ()) -> String {
         return NSLocalizedString("datePublishedTitle", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Log Out
+      static func logoutTitle(_: Void = ()) -> String {
+        return NSLocalizedString("logout.title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Log Out?
+      static func logoutConfirmationTitle(_: Void = ()) -> String {
+        return NSLocalizedString("logout-confirmation.title", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: Today's News
@@ -386,12 +421,9 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "fb-icon", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'fb-icon' is used in storyboard 'Auth', but couldn't be loaded.") }
         if UIKit.UIImage(named: "placeholder", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'placeholder' is used in storyboard 'Auth', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
           if UIKit.UIColor(named: "Bunting", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'Bunting' is used in storyboard 'Auth', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "DeepSkyBlue", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'DeepSkyBlue' is used in storyboard 'Auth', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "Indigo", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'Indigo' is used in storyboard 'Auth', but couldn't be loaded.") }
         }
         if _R.storyboard.auth().landingController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'landingController' could not be loaded from storyboard 'Auth' as 'LandingController'.") }
         if _R.storyboard.auth().loginController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'loginController' could not be loaded from storyboard 'Auth' as 'LoginController'.") }

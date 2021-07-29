@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     guard let _ = (scene as? UIWindowScene) else { return }
     
+    setupNotificationObservers()
     updateRootViewController()
   }
 
@@ -52,13 +53,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   
   func updateRootViewController(_ notification: Notification
                                 = Notification(name: SessionService.Notifications.didLogin)) {
-    
       DispatchQueue.main.async {
         if App.shared.sessionService.isLoggedIn {
             self.switchToDashboard()
         } else {
           self.switchToFrontPage()
-//          self.tabBar.resetTabBar()
         }
       }
   }
@@ -89,11 +88,11 @@ private extension SceneDelegate {
       queue: opQueue,
       using: updateRootViewController)
     
-//    nc.addObserver(
-//      forName: SessionService.Notifications.didLogout,
-//      object: nil,
-//      queue: opQueue,
-//      using: updateRootViewController)
+    nc.addObserver(
+      forName: SessionService.Notifications.didLogout,
+      object: nil,
+      queue: opQueue,
+      using: updateRootViewController)
     
   }
 }

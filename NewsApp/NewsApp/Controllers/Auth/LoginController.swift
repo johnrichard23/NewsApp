@@ -22,6 +22,7 @@ class LoginController: CustomScrollViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setup()
     }
 }
@@ -55,12 +56,12 @@ extension LoginController {
     }
     
     SVProgressHUD.show()
-//    App.shared.sessionService.login(email: email, password: password) { error in
-//      if let error = error {
-//        return SVProgressHUD.showDismissableError(with: error.localizedDescription)
-//      }
-//      SVProgressHUD.dismiss()
-//    }
+    App.shared.sessionService.login(email: email, password: password) { error in
+      if let error = error {
+        return SVProgressHUD.showDismissableError(with: error.localizedDescription)
+      }
+      SVProgressHUD.dismiss()
+    }
   }
 }
 

@@ -82,6 +82,9 @@
 		CA07CB0F26B19D4700B1F2B9 /* LandingButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB0E26B19D4700B1F2B9 /* LandingButtonBarView.swift */; };
 		CA07CB1126B19D8100B1F2B9 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB1026B19D8100B1F2B9 /* UIView.swift */; };
 		CA07CB1426B1A12800B1F2B9 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB1326B1A12800B1F2B9 /* DefaultButton.swift */; };
+		CA07CB1626B2321400B1F2B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA07CB1526B2321300B1F2B9 /* GoogleService-Info.plist */; };
+		CA07CB1826B2450D00B1F2B9 /* APIClient+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB1726B2450D00B1F2B9 /* APIClient+Auth.swift */; };
+		CA07CB1A26B29AFB00B1F2B9 /* LogoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07CB1926B29AFB00B1F2B9 /* LogoutController.swift */; };
 		D7F727D75E359F58B6528C64 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76C354F512E12F8D462F697 /* Pods_NewsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -189,6 +192,9 @@
 		CA07CB0E26B19D4700B1F2B9 /* LandingButtonBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingButtonBarView.swift; sourceTree = "<group>"; };
 		CA07CB1026B19D8100B1F2B9 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		CA07CB1326B1A12800B1F2B9 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
+		CA07CB1526B2321300B1F2B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA07CB1726B2450D00B1F2B9 /* APIClient+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Auth.swift"; sourceTree = "<group>"; };
+		CA07CB1926B29AFB00B1F2B9 /* LogoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +284,7 @@
 				CA07CA4126B04DB700B1F2B9 /* Main.storyboard */,
 				CA07CA4626B04DBA00B1F2B9 /* LaunchScreen.storyboard */,
 				CA07CA4926B04DBA00B1F2B9 /* Info.plist */,
+				CA07CB1526B2321300B1F2B9 /* GoogleService-Info.plist */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -394,6 +401,7 @@
 				CA07CA8126B058D200B1F2B9 /* Services */,
 				CA07CA7F26B058CD00B1F2B9 /* App.swift */,
 				CA07CA8326B0590500B1F2B9 /* APIClient.swift */,
+				CA07CB1726B2450D00B1F2B9 /* APIClient+Auth.swift */,
 				CA07CADB26B0F00E00B1F2B9 /* APIClient+News.swift */,
 				CA07CAE126B11BBB00B1F2B9 /* Router.swift */,
 			);
@@ -520,6 +528,7 @@
 				CA07CAF926B176D000B1F2B9 /* LandingController.swift */,
 				CA07CAFB26B177E000B1F2B9 /* LoginController.swift */,
 				CA07CAFD26B177FA00B1F2B9 /* SignUpController.swift */,
+				CA07CB1926B29AFB00B1F2B9 /* LogoutController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -669,6 +678,7 @@
 			files = (
 				CA07CAF626B1753700B1F2B9 /* Auth.storyboard in Resources */,
 				CA07CAD626B0E6A300B1F2B9 /* News.storyboard in Resources */,
+				CA07CB1626B2321400B1F2B9 /* GoogleService-Info.plist in Resources */,
 				CA07CACA26B0757F00B1F2B9 /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				CA07CAC326B0757F00B1F2B9 /* Montserrat-Bold.otf in Resources */,
 				CA07CAC626B0757F00B1F2B9 /* Montserrat-Medium.otf in Resources */,
@@ -823,6 +833,7 @@
 				CA07CA7926B0569100B1F2B9 /* NewsController.swift in Sources */,
 				CA07CADE26B0F17100B1F2B9 /* Constants.swift in Sources */,
 				CA07CB0F26B19D4700B1F2B9 /* LandingButtonBarView.swift in Sources */,
+				CA07CB1826B2450D00B1F2B9 /* APIClient+Auth.swift in Sources */,
 				CA07CAE026B0F32C00B1F2B9 /* SVProgressHUD.swift in Sources */,
 				CA07CA7226B0553F00B1F2B9 /* HomeController.swift in Sources */,
 				CA07CAE226B11BBB00B1F2B9 /* Router.swift in Sources */,
@@ -840,6 +851,7 @@
 				CA07CA7D26B056CC00B1F2B9 /* R.generated.swift in Sources */,
 				CA07CADC26B0F00E00B1F2B9 /* APIClient+News.swift in Sources */,
 				CA07CAE426B1343500B1F2B9 /* UINavigationItem.swift in Sources */,
+				CA07CB1A26B29AFB00B1F2B9 /* LogoutController.swift in Sources */,
 				CA07CAFA26B176D000B1F2B9 /* LandingController.swift in Sources */,
 				CA07CB0026B17EFC00B1F2B9 /* CustomScrollViewController.swift in Sources */,
 				CA07CA9626B05B2200B1F2B9 /* Model.swift in Sources */,
